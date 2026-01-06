@@ -9,6 +9,10 @@
 {
   "ui_font_size": 15.0,
   "context_servers": {
+    "arch-ops-server": {
+      "enabled": true,
+      "settings": {},
+    },
     "mcp-server-markitdown": {
       "enabled": false,
       "settings": {},
