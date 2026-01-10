@@ -57,7 +57,7 @@
     "model_parameters": [],
   },
   "features": {
-    "edit_prediction_provider": "copilot",
+    "edit_prediction_provider": "zed",
   },
   "outline_panel": {
     "folder_icons": true,
@@ -105,10 +105,10 @@
         "external": {
           "command": "shfmt",
           // change '--indent 2' to match preffered indentation size
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+          "arguments": ["--filename", "{buffer_path}", "--indent", "4"],
         },
       },
-      "tab_size": 2,
+      "tab_size": 4,
       "hard_tabs": false,
     },
     "Python": {
