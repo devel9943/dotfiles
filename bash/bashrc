@@ -1,0 +1,24 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PS1='[\u@\h \W]\$ '
+
+# Source all scripts in ~/.bash directory
+if [ -d "$HOME/.bash" ]; then
+    shopt -s globstar
+    for file in "$HOME/.bash"/**/*.bash; do
+        [ -f "$file" ] && source "$file"
+    done
+fi
+
+# add $HOME/.local/bin to $PATH
+if [ -d ~/.local/bin ]; then
+    case ":$PATH:" in
+        *:~/.local/bin:*) ;;
+        *) export PATH="$HOME/.local/bin:$PATH" ;;
+    esac
+fi

@@ -1,0 +1,113 @@
+# Ghostty Configuration
+
+# ============================================================================
+# Environment Variables
+# ============================================================================
+
+# ============================================================================
+# Shell Configuration
+# ============================================================================
+command = /bin/bash -c tmux
+
+# ============================================================================
+# Shell Integration
+# ============================================================================
+shell-integration = detect
+
+# ============================================================================
+# Theme
+# ============================================================================
+theme = opencode
+
+# ============================================================================
+# Window Settings
+# ============================================================================
+background-opacity = 0.95
+window-decoration = true
+window-theme = dark
+
+# Window padding
+#window-padding-x = 3
+#window-padding-y = 3
+window-padding-balance = true
+window-padding-color = extend
+
+# ============================================================================
+# Scrolling
+# ============================================================================
+# Alacritty: 10000 lines ≈ ~2MB (assuming average 200 bytes per line)
+scrollback-limit = 2097152
+mouse-scroll-multiplier = 3
+
+# ============================================================================
+# Font Configuration
+# ============================================================================
+font-family = monospace
+font-size = 12
+
+font-family-bold = monospace
+font-style-bold = Bold
+
+font-family-italic = monospace
+font-style-italic = Italic
+
+font-family-bold-italic = monospace
+font-style-bold-italic = Bold Italic
+
+# ============================================================================
+# Cursor Configuration
+# ============================================================================
+cursor-style = underline
+cursor-opacity = 1.0
+# Note: cursor-thickness is for bar cursor, underline thickness is controlled by adjust-underline-thickness
+# Alacritty's cursor thickness of 0.15 doesn't have a direct equivalent for underline cursor
+
+# ============================================================================
+# Mouse Configuration
+# ============================================================================
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# ============================================================================
+# Selection Configuration
+# ============================================================================
+# Alacritty's semantic_escape_chars equivalent is handled differently in Ghostty
+# The default behavior should be similar
+
+# ============================================================================
+# Keyboard Bindings
+# ============================================================================
+
+# Paste
+keybind = paste=paste_from_clipboard
+
+# Copy
+keybind = copy=copy_to_clipboard
+
+# Ctrl+L - Clear log notice (Ghostty doesn't have this exact action, ignoring)
+keybind = ctrl+l=ignore
+
+# Scroll page up with Shift+PageUp
+keybind = shift+page_up=scroll_page_up
+
+# Scroll page down with Shift+PageDown
+keybind = shift+page_down=scroll_page_down
+
+# Ctrl+Shift+V - Paste
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# Ctrl+Shift+C - Copy (with performable prefix to only copy when there's a selection)
+keybind = performable:ctrl+shift+c=copy_to_clipboard
+
+# Ctrl+0 - Reset font size
+keybind = ctrl+0=reset_font_size
+
+# ============================================================================
+# Additional Settings
+# ============================================================================
+
+# Live config reload (enabled by default in Ghostty)
+# Ghostty supports live reload via ctrl+shift+, (Linux) or cmd+shift+, (macOS)
+
+# Note: Middle mouse button paste is handled natively by Ghostty and doesn't
+# require explicit configuration

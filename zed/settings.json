@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "extension",
+      "favorite_models": [
+        "opencode/claude-sonnet-4-5",
+        "opencode/gpt-5.1-codex",
+        "opencode/claude-haiku-4-5"
+      ],
+      "default_config_options": {},
+      "favorite_config_option_values": {}
+    }
+  },
   "ui_font_size": 15.0,
   "context_servers": {
     "arch-ops-server": {
@@ -48,9 +60,10 @@
     },
   },
   "agent": {
+    "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "provider": "openai",
+      "model": "gpt-5-codex",
     },
     "use_modifier_to_send": true,
     "button": true,
@@ -168,5 +181,5 @@
   "buffer_font_family": ".ZedMono",
   "icon_theme": "Light Charmed Icons",
   "buffer_font_size": 15.0,
-  "theme": "One Dark",
+  "theme": "JetBrains Dark",
 }
